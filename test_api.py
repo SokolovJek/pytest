@@ -35,9 +35,11 @@ def test_get_info(backend, get_all_url) -> None:
             pars_url.append(f"{host}{api}")
     print(pars_url)
 
+
 def test_server_info():
     r = requests.get(backend + "/server/info")
     assert r.status_code == 200
+
 
 def test_server_config():
     r = requests.get(backend + "/server/config")
